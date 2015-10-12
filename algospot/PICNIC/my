@@ -1,0 +1,26 @@
+# 내 풀이
+
+* reference : https://www.algospot.com/judge/problem/read/PICNIC
+
+* 정확한 풀이는 아니고 일단 의식의 흐름을 적어본다.
+Map<int, Collection<int>> map = new HashMap();
+private Map setDefaultMap(int left, int right) {
+if(map.get(left) !=null) {
+map.get(left).add(right)
+} else {
+map.put(left, new HashSet())
+}
+}
+
+private int getNumberOfCases() {
+Set<Set<int>> set = new HashSet();
+for(int a : map.getKeys()) {
+Set hmm = new LinkedHashSet();
+if(map.get(a) != null || map.get(a).size != 0) {
+for(int b : map.get(a)) {
+hmm.add(a);
+hmm.add(b);
+}
+
+
+잘 모르겠다..일단 여기까지
